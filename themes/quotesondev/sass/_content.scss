@@ -31,3 +31,111 @@
 	clear: both;
 	margin: 0 0 $base__space-unit;
 }
+.site{
+	padding: 2.5%;
+	max-width: 1080px;
+}
+@include desktop{
+	.site-content{
+		margin: 72px 175px 24px;
+		display: inline-flex;
+		&::before{
+			font-family: "Font Awesome 5 Solid";
+			content: "\f10d";
+			margin-top: 2.5rem;
+		}
+		&::after{
+			font-family: "Font Awesome 5 Solid";
+			content: "\f10e";
+			margin-top: 2.5rem;
+		}
+	}
+}
+/*header*/
+
+#masthead{
+	margin-top: 3rem;
+	.logo{
+		@include desktop{
+			display: flex;
+			justify-content: center;
+		}
+		img{
+			width: 300px;
+			height: auto;
+			max-width: 100%;
+			@include tablet {
+				width: 500px;
+			}
+			@include desktop {
+				width: 700px;
+			}
+		}
+		a{
+			@extend img ;
+		}
+	}
+}
+
+/*about page*/
+.page{
+	.entry-title{
+		margin-top: 2.5rem;
+	}
+	.hentry{
+		margin-bottom: 1.5rem;
+	}
+	.entry-content{
+		margin-top: 1.5rem;
+	}
+}
+
+/*footer*/
+
+.site-footer{
+	.site-info{
+		margin: 4.1rem 0 3rem;
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column;
+		@include tabletanddesktop{
+			flex-direction: row;
+			align-items: center;
+		}
+		@include desktop{
+			justify-content: flex-end;
+		}
+	}
+	.main-navigation{
+		@include tabletanddesktop{
+			width: auto;
+		}
+	}
+	li{
+		margin-top: 1.5rem;
+		padding: 0 1rem;
+		border-right: 1px solid white;
+		line-height: 1;
+		font-weight: 300px;
+		&:first-child{
+			padding-left: 0px;
+		}
+		&:last-child{
+			border: none;
+			@include tabletanddesktop{
+				border-right: 1px solid white;
+			}
+
+		}
+	}
+	.footer-branding{
+		line-height: 1;
+		clear: both;
+		margin-top: 1rem;
+		@include tabletanddesktop{
+			margin-bottom: 0px;
+			margin-top: 1.5rem;
+			padding-left: 1rem;
+		}
+	}
+}

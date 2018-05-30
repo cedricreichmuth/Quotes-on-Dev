@@ -117,7 +117,7 @@ sup {
 sub {
   bottom: -0.25em; }
 
-img {
+img, #masthead .logo a {
   border: 0; }
 
 svg:not(:root) {
@@ -221,6 +221,34 @@ th {
 /*--------------------------------------------------------------
 # Embedded Fonts
 --------------------------------------------------------------*/
+@font-face {
+  font-family: 'Exo';
+  src: url("../../fonts/Exo-Light.eot");
+  src: url("../../fonts/Exo-Light.eot?#iefix") format("embedded-opentype"), url("../../fonts/Exo-Light.woff2") format("woff2"), url("../../fonts/Exo-Light.woff") format("woff"), url("../../fonts/Exo-Light.ttf") format("truetype"), url("../../fonts/Exo-Light.svg#../../fonts/Exo-Light") format("svg");
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Exo';
+  src: url("../../fonts/Exo-LightItalic.eot");
+  src: url("../../fonts/Exo-LightItalic.eot?#iefix") format("embedded-opentype"), url("../../fonts/Exo-LightItalic.woff2") format("woff2"), url("../../fonts/Exo-LightItalic.woff") format("woff"), url("../../fonts/Exo-LightItalic.ttf") format("truetype"), url("../../fonts/Exo-LightItalic.svg#../../fonts/Exo-LightItalic") format("svg");
+  font-weight: 300;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Exo';
+  src: url("../../fonts/Exo-MediumItalic.eot");
+  src: url("../../fonts/Exo-MediumItalic.eot?#iefix") format("embedded-opentype"), url("../../fonts/Exo-MediumItalic.woff2") format("woff2"), url("../../fonts/Exo-MediumItalic.woff") format("woff"), url("../../fonts/Exo-MediumItalic.ttf") format("truetype"), url("../../fonts/Exo-MediumItalic.svg#../../fonts/Exo-MediumItalic") format("svg");
+  font-weight: 500;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Exo';
+  src: url("../../fonts/Exo-Medium.eot");
+  src: url("../../fonts/Exo-Medium.eot?#iefix") format("embedded-opentype"), url("../../fonts/Exo-Medium.woff2") format("woff2"), url("../../fonts/Exo-Medium.woff") format("woff"), url("../../fonts/Exo-Medium.ttf") format("truetype"), url("../../fonts/Exo-Medium.svg#../../fonts/Exo-Medium") format("svg");
+  font-weight: 500;
+  font-style: normal; }
+
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
@@ -229,8 +257,8 @@ button,
 input,
 select,
 textarea {
-  color: #404040;
-  font-family: sans-serif;
+  color: white;
+  font-family: "Exo";
   font-size: 1rem;
   line-height: 1.5; }
 
@@ -238,9 +266,14 @@ textarea {
 h1, h2, h3, h4, h5, h6 {
   clear: both; }
 
+h1 {
+  margin: .67em 0;
+  font-weight: bold; }
+
 /* Copy */
 p {
-  margin-bottom: 1.5rem; }
+  margin-bottom: 1.5rem;
+  font-weight: 300; }
 
 dfn, cite, em, i {
   font-style: italic; }
@@ -292,8 +325,17 @@ html {
           box-sizing: inherit; }
 
 body {
-  background: #fff;
+  background: #222222;
+  height: 100vh;
   /* Fallback for when there is no custom background color defined. */ }
+  @media (min-width: 1024px) {
+    body {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center; } }
 
 blockquote, q {
   quotes: "" ""; }
@@ -326,7 +368,7 @@ dt {
 dd {
   margin: 0 1.5rem 1.5rem; }
 
-img {
+img, #masthead .logo a {
   height: auto;
   /* Make sure images are scaled correctly. */
   max-width: 100%;
@@ -407,11 +449,10 @@ textarea {
 --------------------------------------------------------------*/
 /* Links */
 a {
-  color: royalblue; }
-  a:visited {
-    color: purple; }
+  color: #00cc00;
+  text-decoration: none; }
   a:hover, a:focus, a:active {
-    color: midnightblue; }
+    color: #009100; }
   a:focus {
     outline: thin dotted; }
   a:hover, a:active {
@@ -424,7 +465,6 @@ a {
   float: left;
   width: 100%; }
   .main-navigation ul {
-    display: none;
     list-style: none;
     margin: 0;
     padding-left: 0; }
@@ -566,6 +606,112 @@ a {
 .page-links {
   clear: both;
   margin: 0 0 1.5rem; }
+
+.site {
+  padding: 2.5%;
+  max-width: 1080px; }
+
+@media (min-width: 1024px) {
+  .site-content {
+    margin: 72px 175px 24px;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex; }
+    .site-content::before {
+      font-family: "Font Awesome 5 Solid";
+      content: "\f10d";
+      margin-top: 2.5rem; }
+    .site-content::after {
+      font-family: "Font Awesome 5 Solid";
+      content: "\f10e";
+      margin-top: 2.5rem; } }
+
+/*header*/
+#masthead {
+  margin-top: 3rem; }
+  @media (min-width: 1024px) {
+    #masthead .logo {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center; } }
+  #masthead .logo img, #masthead .logo a {
+    width: 300px;
+    height: auto;
+    max-width: 100%; }
+    @media (min-width: 768px) and (max-width: 1023px) {
+      #masthead .logo img, #masthead .logo a {
+        width: 500px; } }
+    @media (min-width: 1024px) {
+      #masthead .logo img, #masthead .logo a {
+        width: 700px; } }
+
+/*about page*/
+.page .entry-title {
+  margin-top: 2.5rem; }
+
+.page .hentry {
+  margin-bottom: 1.5rem; }
+
+.page .entry-content {
+  margin-top: 1.5rem; }
+
+/*footer*/
+.site-footer .site-info {
+  margin: 4.1rem 0 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+  @media (min-width: 768px) {
+    .site-footer .site-info {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; } }
+  @media (min-width: 1024px) {
+    .site-footer .site-info {
+      -webkit-box-pack: end;
+          -ms-flex-pack: end;
+              justify-content: flex-end; } }
+
+@media (min-width: 768px) {
+  .site-footer .main-navigation {
+    width: auto; } }
+
+.site-footer li {
+  margin-top: 1.5rem;
+  padding: 0 1rem;
+  border-right: 1px solid white;
+  line-height: 1;
+  font-weight: 300px; }
+  .site-footer li:first-child {
+    padding-left: 0px; }
+  .site-footer li:last-child {
+    border: none; }
+    @media (min-width: 768px) {
+      .site-footer li:last-child {
+        border-right: 1px solid white; } }
+
+.site-footer .footer-branding {
+  line-height: 1;
+  clear: both;
+  margin-top: 1rem; }
+  @media (min-width: 768px) {
+    .site-footer .footer-branding {
+      margin-bottom: 0px;
+      margin-top: 1.5rem;
+      padding-left: 1rem; } }
 
 /*--------------------------------------------------------------
 # Media
