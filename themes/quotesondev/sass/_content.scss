@@ -37,17 +37,22 @@
 }
 @include desktop{
 	.site-content{
-		margin: 72px 175px 24px;
+		padding: 72px 175px 24px;
 		display: inline-flex;
+		position: relative;
 		&::before{
-			font-family: "Font Awesome 5 Solid";
 			content: "\f10d";
-			margin-top: 2.5rem;
+			color: green;
+			font-family: "Font Awesome 5 Free";
+			font-weight: 900;
+			font-size: 125px;
 		}
 		&::after{
-			font-family: "Font Awesome 5 Solid";
 			content: "\f10e";
-			margin-top: 2.5rem;
+			color: green;
+			font-family: "Font Awesome 5 Free";
+			font-weight: 900;
+			font-size: 125px;
 		}
 	}
 }
@@ -81,6 +86,9 @@
 .page{
 	.entry-title{
 		margin-top: 2.5rem;
+		@include desktop{
+			margin-top: 0;
+		}
 	}
 	.hentry{
 		margin-bottom: 1.5rem;

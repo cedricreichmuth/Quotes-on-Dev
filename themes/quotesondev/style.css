@@ -613,18 +613,23 @@ a {
 
 @media (min-width: 1024px) {
   .site-content {
-    margin: 72px 175px 24px;
+    padding: 72px 175px 24px;
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
-    display: inline-flex; }
+    display: inline-flex;
+    position: relative; }
     .site-content::before {
-      font-family: "Font Awesome 5 Solid";
       content: "\f10d";
-      margin-top: 2.5rem; }
+      color: green;
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      font-size: 125px; }
     .site-content::after {
-      font-family: "Font Awesome 5 Solid";
       content: "\f10e";
-      margin-top: 2.5rem; } }
+      color: green;
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      font-size: 125px; } }
 
 /*header*/
 #masthead {
@@ -651,6 +656,9 @@ a {
 /*about page*/
 .page .entry-title {
   margin-top: 2.5rem; }
+  @media (min-width: 1024px) {
+    .page .entry-title {
+      margin-top: 0; } }
 
 .page .hentry {
   margin-bottom: 1.5rem; }
