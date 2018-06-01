@@ -56,14 +56,32 @@ add_filter( 'stylesheet_uri', 'qod_minified_css', 10, 2 );
  * Enqueue scripts and styles.
  */
 function qod_scripts() {
+	wp_enqueue_script('jquery');
+
 	wp_enqueue_style( 'qod-style', get_stylesheet_uri() );
 
 	wp_enqueue_style('font-awesome', 'https://use.fontawesome.com/releases/v5.0.13/css/all.css');
 
 	wp_enqueue_script( 'qod-skip-link-focus-fix', get_template_directory_uri() . '/build/js/skip-link-focus-fix.min.js', array(), '20130115', true );
 
+	if(function_exists('rest_url')){
+		wp_enqueue_script( 'qod-api', get_template_directory_uri() . '/build/js/api.min.js', array('jquery'), false, true );
+		wp_localize_script('qod-api', 'api_vars', array(
+			'rest_url' => esc_url_raw( rest_url() ),
+      'nonce' => wp_create_nonce( 'wp_rest' ),
+			'home_url' => esc_url_raw(home_url())
+		));
+	}
+
+
+
 }
 add_action( 'wp_enqueue_scripts', 'qod_scripts' );
+
+/**
+ * Enable WP API parameter filtering.
+*/
+require get_template_directory() . '/inc/api-filter.php';
 
 /**
  * Custom functions that act independently of the theme templates.

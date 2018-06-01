@@ -31,31 +31,43 @@
 	clear: both;
 	margin: 0 0 $base__space-unit;
 }
+
+/*general layout*/
+
 .site{
+	margin: 0 auto;
 	padding: 2.5%;
 	max-width: 1080px;
+	width: 100%;
 }
 @include desktop{
+	.content-area{
+		max-width: 670px;
+		margin: auto;
+	}
 	.site-content{
-		padding: 72px 175px 24px;
-		display: inline-flex;
-		position: relative;
+		margin: 0rem 0px 1.5rem;
+		display: flex;
+		justify-content: space-between;
 		&::before{
 			content: "\f10d";
-			color: green;
+			color: #00cc00;
 			font-family: "Font Awesome 5 Free";
 			font-weight: 900;
-			font-size: 125px;
+			font-size: 115px;
+			margin-top: 1rem;
 		}
 		&::after{
 			content: "\f10e";
-			color: green;
+			color: #00cc00;
 			font-family: "Font Awesome 5 Free";
 			font-weight: 900;
-			font-size: 125px;
+			font-size: 115px;
+			margin-top: 1rem;
 		}
 	}
 }
+
 /*header*/
 
 #masthead{
@@ -97,6 +109,89 @@
 		margin-top: 1.5rem;
 	}
 }
+
+/*home page & single page*/
+
+.blog, .single{
+	article{
+		p{
+			@include desktop{
+				font-size: 2.5rem;
+			}
+			@include tablet{
+				font-size: 1.75rem;
+			}
+			font-size: 1.25rem;
+		}
+		.entry-title{
+			font-size: 1.25rem;
+			font-weight: 400;
+			margin: 0px;
+		}
+		h2{
+			@extend .entry-title ;
+			display: inline;
+		}
+		.entry-meta{
+			margin-bottom: 3rem;
+			a{
+				font-size: 1.25rem;
+				font-weight: 400;
+			}
+			.source{
+				font-size: 1.25rem;
+				font-style: italic;
+				&::before{
+					content: ",";
+					padding-right: 5px;
+				}
+			}
+		}
+	}
+}
+
+/*404*/
+.error404{
+	.content-area{
+		margin-top: 20px;
+		@include desktop{
+			margin-right: 250px;
+		}
+	}
+}
+
+/*search page*/
+.search, .archive{
+	.page-title{
+		border-bottom: 1px dotted #fff;
+		margin-top: 3rem;
+		padding-bottom: 1.5rem;
+	}
+	.no-results{
+		width: 675px;
+		text-align: left;
+	}
+}
+
+/*archives*/
+.archive{
+	article{
+		padding-bottom: 3rem;
+		border-bottom: 1px dotted #fff;
+		p{
+			font-size: 2.5rem;
+		}
+		h2{
+			font-size: 1.25rem;
+			display: inline;
+		}
+		span{
+			font-size: 1.25rem;
+			font-style: italic;
+		}
+	}
+}
+
 
 /*footer*/
 

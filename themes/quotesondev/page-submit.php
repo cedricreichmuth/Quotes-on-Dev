@@ -39,7 +39,8 @@ get_header(); ?>
               <input type="submit" value="Submit Quote">
             </form>
             <!--success message upon submission-->
-            <p class="submit-subbess-message" style="display: none"></p>
+            <p class="submit-success-message" style="display: none">Yay! Your quote has been submitted!</p>
+						<input id="submit-another-quote" type="button" style="display: none" value="Submit another quote"></input>
 
           </div><!--quote submission wrapper-->
         <?php else :?>

@@ -3,5 +3,74 @@
 --------------------------------------------------------------*/
 
 /* All Archives Page */
-
+.page-template-default{
+  .page-title{
+    margin-top: 3rem;
+  }
+}
+.post-archive{
+  h2{
+    padding-top: 20px;
+  }
+}
+.wp-tag-cloud{
+  li{
+    a{
+      @include tablet{
+        font-size: 1.25rem!important;
+      }
+      @include desktop{
+        font-size: 1.25rem!important;
+      }
+    }
+  }
+}
+.post-archive, .category-archives, .tags-archives{
+  ul{
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+    li{
+      display: inline-flex;
+      margin-bottom: .5rem;
+      margin-right: 1.125rem;
+      font-size: 1rem;
+      text-align: match-parent;
+      font-weight: 300;
+      @include tablet{
+        font-size: 1.25rem;
+      }
+      @include desktop{
+        font-size: 1.25rem;
+      }
+    }
+  }
+}
 /* Submit a Quote Page */
+.quote-submission-wrapper{
+  @include desktop{
+    width: 675px;
+  }
+  label{
+    display: block;
+  }
+  input{
+    display: block;
+    width: 60%;
+  }
+  input[type="textarea"]{
+    width: 100%;
+    height: 100px;
+  }
+  input[type="submit"]{
+    width: auto;
+  }
+}
+    /*you must login to submit a quote screen*/
+.page-id-111{
+  @include desktop{
+    section{
+      width: 675px;
+    }
+  }
+}
