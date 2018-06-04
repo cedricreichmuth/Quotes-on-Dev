@@ -19,10 +19,10 @@ A Wordpress page where you can read and post quotes on development.
 
 ## Screenshots
 
-![alt text](themes/quotesondev/images/screenshots/front-page.png)
+![alt text](themes/quotesondev/images/front-page.png)
 
-![alt text](themes/quotesondev/images/screenshots/about-page.png)
+![alt text](themes/quotesondev/images/about-page.png)
 
-![alt text](themes/quotesondev/images/screenshots/archives-page.png)
+![alt text](themes/quotesondev/images/archives-page.png)
 
-![alt text](themes/quotesondev/images/screenshots/submit-page.png)
+![alt text](themes/quotesondev/images/submit-page.png)
