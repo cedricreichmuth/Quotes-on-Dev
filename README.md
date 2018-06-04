@@ -4,7 +4,7 @@ Quotes on Dev
 
 ## Description
 
-A project I completed during the Web Developer program at RED Academy
+A project I completed during the Web Developer program at RED Academy  
 A Wordpress page where you can read and post quotes on development.
 
 ## Built With
